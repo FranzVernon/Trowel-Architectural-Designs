@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trowel Architectural Design</title>
+  <style>
+    /* Apple system font + reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1d1d1f;
+      line-height: 1.5;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 1000;
+      border-bottom: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #333;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 160px 60px 60px;
+      background-color: #f9f9f9;
+      transition: background 1s ease;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      animation: fadeInUp 1s ease-out;
+      color: #000;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
+      line-height: 1.8;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+      padding: 60px 60px;
+      text-align: left;
+    }
+
+    footer p, footer a {
+      font-size: 14px;
+      color: #555;
+      line-height: 2;
+    }
+
+    footer a {
+      display: block;
+      margin-top: 5px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 140px 30px 60px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trowel Architectural Design</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Designing Timeless Spaces</h2>
+    <p>
+      Trowel Architectural Design is a Philippine-based architectural and construction firm dedicated to minimalist, modern design. We craft elegant, functional spaces that inspire.
+    </p>
+  </section>
+
+  <footer>
+    <p><strong>Contact Us</strong></p>
+    <a href="mailto:trowelarchitecturaldesigns@gmail.com">trowelarchitecturaldesigns@gmail.com</a>
+    <a href="https://facebook.com/TrowelArchitecturalDesign" target="_blank">Facebook: Trowel Architectural Design</a>
+    <a href="https://instagram.com/trowelarchitecturaldesigns" target="_blank">Instagram: @trowelarchitecturaldesigns</a>
+  </footer>
+</body>
+</html>
